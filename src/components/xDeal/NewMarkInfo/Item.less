@@ -1,0 +1,178 @@
+.default {
+  //background: url("../../../assets/xiangyun.png");
+
+  .main {
+
+    .top {
+      display: flex;
+      .left {
+        position: relative;
+        border-right: 1px solid grey;
+        flex: 0 0 40px;
+        text-align: center;
+        padding-top: 70px;
+        color: black;
+        .zl {
+          position: absolute;
+          left: 5px;
+          top: 100px;
+        }
+        .fx {
+          position: absolute;
+          left: 5px;
+          top: 40px;
+        }
+      }
+
+      .right {
+        flex: 1 1 auto;
+        padding: 10px;
+
+        .item {
+          width: 100%;
+          margin: 0;
+
+          :global {
+            .ant-select-selection--multiple > ul > li, .ant-select-selection--multiple .ant-select-selection__rendered > ul > li {
+              width: 200px;
+            }
+            .ant-tag-checkable {
+              line-height: 30px;;
+              height: 30px;
+              font-size: 14px;
+              border: 1px solid #b0b0b0;
+            }
+          }
+        }
+
+        :global {
+          .ant-input {
+            border: 1px solid gray;
+            color: black;
+            font-size: 16px;
+          }
+          .ant-select .ant-select-selection {
+            color: black;
+            border: 1px solid gray;
+          }
+
+        }
+
+      }
+    }
+
+    .del {
+      border-top: solid 1px grey;
+
+      .delete {
+        float: right;
+        margin: 10px 20px;
+      }
+
+    }
+
+  }
+
+  .title {
+    background-color: rgb(51, 51, 51);
+    color: #fff;
+    padding: 5px 20px;
+  }
+
+  .content {
+    border-bottom: 1px solid #eeeeee;
+    padding: 5px 10px;
+
+    .main {
+      .part {
+        display: flex;
+        .left {
+          width: 50px;
+          font-weight: bold;
+          flex: 0 0 auto;
+          text-align: center;
+          padding-top: 15px;
+          color: rgba(0, 0, 0, 0.65);
+        }
+
+        .right {
+          flex: 1 1 auto;
+          //width: 200px;
+
+          .icon {
+            position: absolute;
+            right: 20px;
+            top: 18px;
+            z-index: 50;
+          }
+
+          .item {
+            width: 100%;
+            margin: 5px 0;
+
+            :global {
+              .ant-select-selection--multiple > ul > li, .ant-select-selection--multiple .ant-select-selection__rendered > ul > li {
+                width: 200px;
+              }
+            }
+          }
+
+          :global {
+            .ant-input {
+              border: 1px solid gray;
+              color: black;
+            }
+            .ant-select .ant-select-selection {
+              color: black;
+              border: 1px solid gray;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .bottom {
+      margin-top: 15px;
+      .save {
+        float: right;
+      }
+
+      .delete {
+        float: right;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .add {
+    padding: 0;
+    float: right;
+  }
+
+}
+
+.tooltip {
+  padding: 5px 10px;
+
+  p {
+    margin: 2px 0;
+    span:first-child {
+      color: #0096ff;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+}
+
+.menuItem {
+  .content {
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

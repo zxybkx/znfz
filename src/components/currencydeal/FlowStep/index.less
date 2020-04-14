@@ -1,0 +1,151 @@
+.active{
+  background-color: red;
+  width: 100px;
+  height: 100px;
+
+}
+.steps {
+  .change {
+    font-size: 18px !important;
+    font-family: MicrosoftYaHei;
+  }
+
+  .goback {
+    width: 108px;
+    //background: rgba(73, 118, 247, 1);
+    float: left;
+
+    box-shadow: 1px 0px 0px 0px rgba(105, 158, 255, 0.44);
+    display: block;
+    height: 80px;
+
+    .icon {
+      width: 37px;
+      padding: 45px;
+      background: url('../../../assets/arrow.png') no-repeat center;
+      width: 37px;
+      height: 21px;
+      background-size: 30%;
+
+    }
+
+  }
+
+  .generalEdit {
+    display: none;
+
+  }
+
+  .ungeneralEdit {
+    display: block;
+  }
+
+  .setepsr {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+:global {
+  .ant-steps-item-wait .ant-steps-item-icon {
+    background-color: transparent;
+  }
+  .ant-modal-confirm-body .ant-modal-confirm-content{
+    color: rgba(0,0,0,.85);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    display: block;
+    overflow: hidden;
+  }
+  .ant-steps-navigation {
+    position: absolute;
+    padding-top: 17px !important;
+  }
+
+
+  .ant-steps {
+    width: 51%;
+
+  }
+
+  .ant-steps-item-icon {
+    width: 22px;
+    height: 22px;
+    border: 1px solid rgba(255, 255, 255, 1);
+  }
+
+  .ant-steps-item-wait .ant-steps-item-icon {
+    border-color: #fff;
+    margin-top: 5px;
+  }
+
+  .index__default___3W3CC .index__flow___1-NKg .index__steps___24sJu .ant-steps-icon {
+    width: 7px;
+    height: 12px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 12px 0;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(73, 118, 247, 1) !important;
+    line-height: 16px;
+  }
+
+  .ant-steps-item-finish .ant-steps-item-icon {
+    margin-top: 5px;
+  }
+}
+
+:global {
+  .ant-steps-navigation .ant-steps-item.ant-steps-item-active::before {
+    width: 80%;
+    left: 17px;
+    z-index: -1;
+  }
+  .ant-steps-navigation .ant-steps-item-container{
+    padding: 10px;
+  }
+  .ant-steps-navigation .ant-steps-item-finish .ant-steps-item-container {
+    background: rgba(19, 51, 142, 0.22);
+    border-radius: 25px;
+    height: 50px;
+    line-height: 50px;
+    width: 148px;
+    text-align: center;
+    }
+    
+    .ant-steps-navigation .ant-steps-item::before {
+    height: 50px;
+    background:none;
+    opacity: 0.22;
+    border-radius: 25px;
+    bottom: 6px;
+    
+    }
+
+  .ant-steps-navigation .ant-steps-item::after {
+    background: url('../../../assets/next.png') no-repeat;
+    width: 25px;
+    height: 19px;
+    background-size: 29%;
+    top: 62%;
+    left: 95%;
+    transform: rotate(0deg);
+    border: 1px solid transparent;
+  }
+
+  .ant-steps-horizontal:not(.ant-steps-label-vertical) .ant-steps-item {
+    margin-right: 0;
+  }
+  .ant-steps .ant-steps-item:not(.ant-steps-item-active):not(.ant-steps-item-process) > .ant-steps-item-container[role='button']:hover .ant-steps-item-icon{
+    border-color:#fff;
+    }
+}
+
+
+
+

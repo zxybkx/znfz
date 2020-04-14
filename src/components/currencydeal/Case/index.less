@@ -1,0 +1,124 @@
+.default{
+  position: relative;
+  background: #001529;
+
+  :global{
+    .ant-card-bordered{
+      border:none;
+    }
+    .ant-steps-navigation .ant-steps-item-container{
+      transition: opacity !important;
+    }
+  }
+  .spin{
+    position: absolute;
+    width: 100vw;
+    height: ~'calc(100vh - 70px)';
+    line-height: ~'calc(100vh - 70px)';
+    right: 0;
+    top: 67px;
+    z-index: 999;
+    background: rgba(0, 0, 0, .2);
+  }
+
+  .fullScreen{
+    z-index: 200;
+    position: fixed;
+    top:0;
+    left:0;
+    height: ~'calc(100vh - 20px)';
+    width: ~'calc(100vw - 20px)';
+    margin: 10px;
+  }
+
+  .flow {
+    display: flex;
+    height: 80px;
+    .steps {
+      flex: 1 1 auto;
+      :global{
+        .ant-steps-item-title::after{
+          background: #d7d7d7;
+        }
+      }
+      :global{
+        .ant-steps-item-finish{
+          .ant-steps-item-title a{
+          // color: #40a9ff !important;
+          }
+         }
+      }
+      :global{
+        .ant-steps-item-title a{
+          color: #fff !important;
+        }
+      }
+      :global {
+        .ant-steps-item-finish {
+          .ant-steps-icon {
+            color: #40a9ff !important;
+            display: block;
+            padding: 3px;
+          }
+        }
+      }
+      :global {
+        .ant-steps-icon {
+          color: #fff !important;
+          display: block;
+          padding: 3px;
+        }
+      }
+    }
+    .tools {
+      position: relative;
+      flex: 0 0 200px;
+
+      //padding: 10px 0 0 0;
+      //flex: 0 0 auto;
+    }
+  }
+
+  :global{
+    .ant-card-body{
+      padding: 0!important;
+      height: ~'calc(100vh - 70px)';
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+  }
+
+}
+
+.content{
+  margin: -24px -16px 0 -16px;
+
+  .main{
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    .left{
+      flex: 0 0 50%;
+      background: #444444;
+      height: 100%;
+      overflow: hidden;
+      padding: 0;
+    }
+    .right{
+      flex: 1 1 auto;
+      height: 100%;
+      overflow-x: hidden;
+      verflow-y: auto;
+      padding: 0;
+      background: #dddddd;
+    }
+    .changeBtn{
+      width: 100%;
+      background: rgba(0, 0, 0, .4);
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+

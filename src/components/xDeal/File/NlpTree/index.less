@@ -1,0 +1,34 @@
+.Tree {
+
+  & .Icon {
+    margin-right: 4px;
+    &.Folder {
+      color: rgb(24, 143, 221);
+      &.empty {
+        color: #b0b0b0;
+      }
+    }
+  }
+
+  .treeNode {
+    margin-top: 10px;
+    height: ~'calc(100vh - 250px)';
+
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  :global {
+    .ant-input {
+      color: rgba(0, 0, 0, .65);
+    }
+
+  }
+
+}
+.titlecolor{
+  color: #fff;
+}
+.selectcolor{
+  color: red;
+}

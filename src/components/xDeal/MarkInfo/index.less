@@ -1,0 +1,192 @@
+.default {
+  padding: 0 20px;
+  margin-bottom: 10px;
+  //border: solid 1px red;
+
+  :global {
+    .ant-collapse .ant-collapse-item {
+      margin-bottom: 20px;
+    }
+
+    .ant-collapse .ant-collapse-item .ant-collapse-header {
+      color: #ffffff;
+      background-color: #333333;
+      padding: 5px 20px;
+      border: none;
+    }
+
+    //.ant-collapse .ant-collapse-item .ant-collapse-header .arrow{
+    //  color: #d7d7d7;
+    //}
+
+    .ant-collapse .ant-collapse-item .ant-collapse-content {
+      padding: 10px;
+      background: #ffffff;
+      border: 1px solid #999;
+    }
+  }
+
+  .sub {
+    :global {
+      .ant-collapse .ant-collapse-item {
+        margin-bottom: 10px;
+      }
+
+      .ant-collapse .ant-collapse-item .ant-collapse-header {
+        color: black;
+        background-color: #e6f7ff;
+        padding: 5px 20px;
+        border: 1px solid #91d5ff;
+      }
+
+      .ant-collapse .ant-collapse-item .ant-collapse-header .arrow {
+        color: grey;
+      }
+
+      .ant-collapse .ant-collapse-item .ant-collapse-content {
+        padding: 0;
+        background: #ffffff;
+        border-left: 1px solid #91d5ff;
+        border-right: 1px solid #91d5ff;
+        border-bottom: 1px solid #91d5ff;
+
+      }
+
+      .ant-input {
+        border: 1px solid gray;
+        color: black;
+        border-radius: 0;
+      }
+    }
+
+    .item {
+      display: flex;
+      margin-bottom: 20px;
+      //background-color: #eee;
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, .5);
+
+      .left {
+        border-top: 1px solid grey;
+        border-bottom: 1px solid grey;
+        border-left: 1px solid grey;
+        flex: 0 0 60px;
+        text-align: center;
+        background-color: #eee;
+        color: black;
+        padding-top: 130px;
+
+      }
+
+      .right {
+        border: 1px solid grey;
+        flex: 1 1 auto;
+        //background-color: white;
+      }
+
+    }
+
+    .part {
+      border: 1px solid #333;
+      margin-bottom: 10px;
+
+      .head {
+        background-color: #333;
+        color: white;
+        padding: 5px 20px;
+      }
+    }
+
+  }
+
+  .title {
+    background-color: rgb(51, 51, 51);
+    color: #fff;
+    padding: 5px 20px;
+  }
+
+  .content {
+    border: 1px solid gray;
+    //border-radius: 10px;
+    padding: 10px 20px 20px;
+    margin: 0 0 20px 0;
+    background-color: #eeeeee;
+
+    .main {
+      .part {
+        display: flex;
+        .left {
+          width: 50px;
+          font-weight: bold;
+          flex: 0 0 auto;
+          text-align: center;
+          padding-top: 15px;
+          color: rgba(0, 0, 0, 0.65);
+        }
+
+        .right {
+          flex: 1 1 auto;
+          //width: 200px;
+
+          .item {
+            width: 100%;
+            margin: 5px 0;
+          }
+
+          :global {
+            .ant-input {
+              border: 1px solid gray;
+              color: black;
+            }
+            .ant-select .ant-select-selection {
+              color: black;
+              border: 1px solid gray;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .bottom {
+      margin-top: 15px;
+      .save {
+        float: right;
+      }
+
+      .delete {
+        float: right;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .add {
+    margin-top: 10px;
+    padding: 0;
+    float: right;
+  }
+
+}
+
+.tooltip {
+  padding: 5px 10px;
+
+  p {
+    margin: 2px 0;
+    span:first-child {
+      color: #0096ff;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+}
+
+.drawer {
+  border: solid 1px grey;
+  margin-bottom: 30px;
+  padding: 10px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}

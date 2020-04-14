@@ -1,0 +1,116 @@
+.default {
+  position: relative;
+  background: #001529;
+  .flow {
+    display: flex;
+    .steps {
+      flex: 1 1 auto;
+      :global{
+        .ant-steps-item-finish{
+          .ant-steps-item-title a{
+            color: #40a9ff !important;
+          }
+        }
+      }
+      :global{
+        .ant-steps-item-title a{
+          color: #ffffff !important;
+        }
+      }
+      :global {
+        .ant-steps-item-finish {
+          .ant-steps-icon {
+            color: #40a9ff !important;
+          }
+        }
+      }
+      :global {
+        .ant-steps-icon {
+          color: #fff !important;
+        }
+      }
+    }
+    .tools {
+      position: relative;
+      flex: 0 0 200px;
+
+      //padding: 10px 0 0 0;
+      //flex: 0 0 auto;
+    }
+  }
+
+  :global {
+    .ant-card-body {
+      padding: 0 !important;
+      height: ~'calc(100vh - 70px)';
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+  }
+
+}
+
+.content {
+  margin: -24px -16px 0 -16px;
+  position: relative;
+  height: ~'calc(100vh - 70px)';
+  display: flex;
+
+  .main {
+    height: 100%;
+    overflow: hidden;
+    flex: 1 1 auto;
+    display: flex;
+
+    .mainLeft {
+      flex: 0 0 50%;
+      background: #444444;
+      height: 100%;
+      border-right: 1px solid gray;
+      position: relative;
+
+      .title {
+        cursor: pointer;
+        z-index: 20;
+        position: absolute;
+        left: 40%;
+        top: 5px;
+        font-weight: bold;
+        font-size: 16px;
+        color: white;
+        letter-spacing: 3px;
+      }
+    }
+    .mainRight {
+      flex: 1 1 auto;
+      height: 100%;
+      background: #444444;
+      border-left: 1px solid gray;
+      position: relative;
+
+      .title {
+        cursor: pointer;
+        z-index: 20;
+        position: absolute;
+        left: 50%;
+        top: 5px;
+        font-weight: bold;
+        font-size: 16px;
+        color: white;
+        letter-spacing: 3px;
+      }
+    }
+
+  }
+
+  .rightSide {
+    width: 380px;
+    background-color: #dbdbdb;
+    flex: 0 0 auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+  }
+}
+
+

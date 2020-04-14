@@ -1,0 +1,84 @@
+:global {
+  .public-DraftStyleDefault-block {
+    margin: 0 auto;
+    text-indent: 2rem;
+  }
+  .rdw-option-wrapper {
+    height: 30px;
+    padding: 5px 10px;
+  }
+
+  .rdw-editor-toolbar {
+    z-index: 550;
+    position: absolute;
+    box-shadow: 0 1px 1px #999;
+  }
+  .rdw-editor-main p {
+    text-indent: 2rem;
+  }
+  .rdw-option-active {
+    background: #1DA57A;
+  }
+}
+
+.ReactEditor {
+  border: 1px solid aliceblue;
+  position: relative;
+  overflow: auto;
+  height: ~'calc(100vh - 180px)';
+  width: 100%;
+  z-index: 1000;
+
+  &.initFullScreen{
+    height: ~'calc(100vh - 160px)';
+  }
+
+  &.fullScreen{
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 10px;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+    background: rgba(0, 0, 0, .85);
+
+    :global{
+      .rdw-editor-toolbar{
+        margin: 0 -10px;
+      }
+    }
+  }
+
+  & h1, & h1 * {
+    color: #111;
+    font-size: 32px;
+  }
+
+  & h2, & h2 * {
+    color: #111;
+    font-size: 26px;
+  }
+
+  & h3, & h3 * {
+    color: #111;
+    font-size: 20px;
+  }
+
+  & h4, & h4 * {
+    color: #111;
+    font-size: 16px;
+  }
+
+  & h5, & h5 * {
+    color: #111;
+    font-size: 1rem;
+  }
+
+  & h6, & h6 * {
+    color: #111;
+    font-size: 1rem;
+  }
+}
+

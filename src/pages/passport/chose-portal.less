@@ -1,0 +1,50 @@
+@import "~antd/lib/style/themes/default.less";
+
+.main {
+  width: 400px;
+  margin: 0 auto;
+
+  & .menuItem {
+    z-index: 300;
+    margin: 10px auto;
+    & a {
+      text-align: center;
+      z-index: 301;
+      position: relative;
+      display: block;
+      color: #d7d7d7;
+      padding: 5px 10px;
+      border: 1px solid transparent;
+      -webkit-transition: all .5s;
+      -moz-transition: all .5s;
+      transition: all .5s;
+
+      & .icon {
+        font-size: 56px;
+        color: #7A7A7A;
+        -webkit-box-reflect: below -5px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.45, transparent), to(rgba(255, 255, 255, 0.25)));
+      }
+      & img {
+        width: 56px;
+        height: 56px;
+      }
+      & div {
+        font-size: 20px;
+        margin-top: 15px;
+        text-align: center;
+        color: #7A7A7A;
+        font-weight: bold;
+      }
+      &.active, &:hover {
+        transform: scale(1.2) !important;
+        & .Icon {
+          color: #0096ff;
+        }
+        & div {
+          color: #0096ff;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

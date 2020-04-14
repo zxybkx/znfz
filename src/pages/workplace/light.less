@@ -1,0 +1,397 @@
+@import "~antd/lib/style/themes/default.less";
+@import "../../utils/utils.less";
+
+.ac {
+  background: rgba(28, 62, 160, 1);
+  color: #ffffff;
+}
+
+/*for IE*/
+:focus {
+  outline: none;
+}
+
+/*for mozilla*/
+::-moz-focus-inner {
+  border-color: transparent;
+}
+
+.yjright {
+  margin: 3px 0 0 10px;
+}
+
+.yj {
+  .yjtp {
+    background: url('../../assets/workPlace/yj.png') no-repeat left;
+    width: 78px;
+    height: 100px;
+    margin: 20px auto;
+    background-size: 76%;
+  }
+
+  .wjaj {
+    background: url('../../assets/workPlace/wjaj.png') no-repeat left;
+    width: 78px;
+    height: 100px;
+    margin: 20px auto;
+    background-size: 76%;
+  }
+
+  .yjaj {
+    background: url('../../assets/workPlace/yjaj.png') no-repeat left;
+    width: 78px;
+    height: 100px;
+    margin: 20px auto;
+    background-size: 76%;
+  }
+
+  .spjd {
+    background: url('../../assets/workPlace/spjd.png') no-repeat left;
+    width: 78px;
+    height: 100px;
+    margin: 20px auto;
+    background-size: 76%;
+  }
+
+
+}
+
+.yjname {
+  font-size: 18px;
+  font-family: 'Microsoft YaHei';
+  font-weight: 400;
+  color: rgba(223, 231, 255, 1);
+}
+
+.currentbtn {
+  button {
+    width: 110px;
+    height: 38px;
+    border: none;
+    font-size: 16px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    margin-right: 18px;
+    cursor: pointer;
+  }
+
+  .sc {
+    margin-right: 23px;
+  }
+
+
+}
+
+:global {
+  .ant-divider {
+    background: transparent;
+  }
+
+  .ant-tabs-nav .ant-tabs-tab {
+    background: rgba(238, 238, 238, 1);
+  }
+}
+
+.border {}
+
+.bodyleft {
+  width: 6px;
+  background: rgba(240, 244, 255, 1);
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.leftTop {
+  margin-top: 16px;
+  background: rgba(73, 118, 247, 1);
+  box-shadow: 0px 2px 4px 0px rgba(111, 131, 190, 0.29);
+
+  .topCard {
+    letter-spacing: 1px;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 0;
+
+    .ujaj {
+      position: relative;
+
+      .text {
+        display: inline-block;
+
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+        padding-left: 67px;
+      }
+
+
+
+      .count {
+        display: block;
+        font-size: 60px;
+        color: #fff;
+        cursor: pointer;
+        margin-top: -5px;
+      }
+    }
+
+    .wjaj {
+      position: relative;
+
+      .text {
+        display: inline-block;
+
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+        padding-left: 67px;
+      }
+
+
+
+      .count {
+        display: block;
+        font-size: 60px;
+        color: #fff;
+        cursor: pointer;
+        margin-top: -5px;
+      }
+    }
+
+    .yjaj {
+      position: relative;
+
+      .text {
+        display: inline-block;
+
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+        padding-left: 67px;
+      }
+
+
+      .count {
+        display: block;
+        font-size: 60px;
+        color: #fff;
+        cursor: pointer;
+        margin-top: -5px;
+      }
+    }
+
+    .ajzs {
+      position: relative;
+
+      .text {
+        display: inline-block;
+
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+        padding-left: 67px;
+      }
+
+      .count {
+        display: block;
+        font-size: 60px;
+        color: #fff;
+        cursor: pointer;
+        margin-top: -5px;
+      }
+    }
+  }
+
+}
+
+.leftMain {
+  margin-top: 5px;
+  height: ~'calc(100vh - 230px)';
+  padding: 20px 0;
+
+  .body {
+    height: ~'calc(50vh - 170px)';
+    padding: 17px 23px 0 26px;
+    background: #fff;
+    border: 1px solid rgba(222, 233, 255, 1);
+    position: relative;
+
+    .gzsjdivider {
+      position: absolute;
+      top: 32px;
+      left: 0;
+
+    }
+
+    .title {
+      margin-bottom: 8px;
+      font-weight: bold;
+      font-size: 20px;
+      font-family: Microsoft YaHei;
+      font-weight:600;
+      color: rgba(19, 44, 115, 1);
+      padding-bottom: 10px;
+    }
+
+    .table {
+      height: ~'calc(50vh - 250px)';
+      overflow: hidden;
+
+      :global {
+        .ant-table-small .ant-table-thead th {
+          font-size: 14px;
+          font-family: MicrosoftYaHei;
+          font-weight: 400;
+          text-align: center;
+          color: rgba(153, 153, 153, 1) !important;
+        }
+
+        .ant-table-tbody>tr {
+          & td {
+            border: 0;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.65);
+            ;
+          }
+
+          &:hover td {}
+        }
+
+        .ant-table-small {
+          border: 0;
+        }
+
+        .ant-table-placeholder {
+          margin: 0 8px;
+        }
+      }
+    }
+  }
+
+}
+
+.rightTop {
+  padding: 20px 30px 30px 30px;
+  height: ~'calc(50vh - 10px)';
+  border: 1px solid #e6e6e6;
+  border-bottom: none;
+  background: #fff;
+  color: #424242 !important;
+  //.rightTopCard{
+  //  height: ~'calc(25vh - 25px)';
+  //  overflow: hidden;
+  //  letter-spacing: 1px;
+  //  font-size: 18px;
+  //}
+
+}
+
+.rightBottom {
+  padding: 20px 30px 30px 30px;
+  height: ~'calc(50vh - 105px)';
+  letter-spacing: 1px;
+  font-size: 18px;
+  border: 1px solid #e6e6e6;
+  border-top: none;
+  background: #fff;
+
+  a {
+    //color: @normal-color;
+    color: #333333;
+
+    &:hover {
+      color: #0096ff;
+    }
+  }
+
+  //.rightBottomBody{
+  //  height: ~'calc(50vh - 190px)';
+  //  overflow: hidden;
+  //
+  //  .line{
+  //    font-size: 14px;
+  //    line-height: 42px;
+  //    letter-spacing: 1px;
+  //  }
+  //}
+}
+
+@media screen and (max-width: @screen-xl) and (min-width: @screen-lg) {
+  .activeCard {
+    margin-bottom: 24px;
+  }
+
+  .members {
+    margin-bottom: 0;
+  }
+
+  .extraContent {
+    margin-left: -44px;
+
+    .statItem {
+      padding: 0 16px;
+    }
+  }
+}
+
+@media screen and (max-width: @screen-lg) {
+  .activeCard {
+    margin-bottom: 24px;
+  }
+
+  .members {
+    margin-bottom: 0;
+  }
+
+  .extraContent {
+    float: none;
+    margin-right: 0;
+
+    .statItem {
+      padding: 0 16px;
+      text-align: left;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: @screen-md) {
+  .extraContent {
+    margin-left: -16px;
+  }
+
+  .projectList {
+    .projectGrid {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: @screen-sm) {
+  .pageHeaderContent {
+    display: block;
+
+    .content {
+      margin-left: 0;
+    }
+  }
+
+  .extraContent {
+    .statItem {
+      float: none;
+    }
+  }
+}
+
+@media screen and (max-width: @screen-xs) {
+  .projectList {
+    .projectGrid {
+      width: 100%;
+    }
+  }
+}

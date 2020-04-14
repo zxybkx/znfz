@@ -1,0 +1,139 @@
+<?xml version="1.0" ?>
+<project name="TyywProject" default="build" basedir=".">
+  <!--define property -->
+	<property name="debug" value="false" />	
+	<property name="app.dir" value="../app" />
+	<property name="deploy.dir" value="./deploy" />				
+	<property name="dev.dir" value="./deploy/dev" />
+	<property name="prod.dir" value="./deploy/prod" />
+	<property name="complie.dir" value="../app/dist/ZNFZApp-win32-ia32" />
+	<property name="script.dir" value="../deploy_script" />
+	<property name="build.dir" value="./" />
+	
+  <!--main target -->
+	<target name="build" description="Build all targets.">
+	  <!--01 clean-->
+		<call target="clean" />
+		<!--02 build-->
+	  <exec program="npm.cmd"  
+			    basedir="C:\Program Files\nodejs"
+			    commandline="run packageWin"
+		/>	
+    <!--03 copy-->	
+	  <call target="copyfile" />
+
+  		<!--04 NSIS-->
+	  <!--dev-->
+	  <exec program="makensis.exe"  
+			    basedir="C:\Program Files (x86)\NSIS"
+			    commandline="znfz_dev.nsi"
+		/>
+	  <!--prod-->
+	  <exec program="makensis.exe"  
+			    basedir="C:\Program Files (x86)\NSIS"
+			    commandline="znfz_prod.nsi"
+		/>
+	</target>
+	
+	<!--clean-->
+	<target name="clean">
+	  <echo message="clean" />
+		<delete verbose="true">
+			<fileset basedir="${dev.dir}">
+				<include name="**" />
+			</fileset>
+		</delete>
+	  
+	  <delete verbose="true">
+			<fileset basedir="${prod.dir}">
+				<include name="**" />
+			</fileset>
+		</delete>
+		
+	  <delete verbose="true">
+			<fileset basedir="${deploy.dir}">
+				<include name="znfz_dev.exe" />
+				<include name="znfz_prod.exe" />				
+			</fileset>
+		</delete>
+		
+		<delete verbose="true">
+			<fileset basedir="${build.dir}">
+				<include name="ZNFZApp.exe" />				
+			</fileset>
+		</delete>
+		
+	</target>
+	
+	<!--03 copyfile-->
+	<target name="copyfile">
+		<echo message="Copying compile files" />
+		<!--adminstrator privilage-->
+	  <copy todir="${build.dir}" >
+			<fileset basedir="${complie.dir}">
+				  <include name="ZNFZApp.exe" />				 				  				  
+			</fileset>
+		</copy>		
+		<exec program="delay.bat"/>
+	  <exec program="mt.exe"  
+			    basedir="C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\x64"
+			    commandline=" -manifest manifest.xml -outputresource:ZNFZApp.exe;1"
+		/>	
+		<exec program="delay.bat"/>
+	  <copy todir="${complie.dir}" >
+			<fileset basedir="${build.dir}">
+				  <include name="ZNFZApp.exe" />	
+				  <include name="manifest.xml" />				 				  				  
+			</fileset>
+		</copy>			
+	  
+	  <copy todir="${complie.dir}/resources" >
+			<fileset basedir="${app.dir}">
+				  <include name="node_modules\**\*" />				 				  				  
+			</fileset>
+		</copy>	
+		<!--dev-->
+		<copy todir="${dev.dir}" >
+			<fileset basedir="${complie.dir}">
+				  <include name="**\*" />				 				  				  
+			</fileset>
+		</copy>		
+		<delete verbose="true">
+			<fileset basedir="${dev.dir}">
+				<include name="resources/app/build/**" />
+				<include name="resources/app/deploy_script/**" />
+				<include name="resources/app/doc/**" />
+				<include name="resources/app/app/index.html" />
+			</fileset>
+		</delete>
+	  <copy todir="${dev.dir}/resources/app/app">
+				<fileset basedir="${script.dir}/dev">
+					<include name="**\*"/>
+				</fileset>
+		</copy>
+		
+		
+		
+		<!--prod-->
+		<copy todir="${prod.dir}" >
+			<fileset basedir="${complie.dir}">
+				  <include name="**\*" />				 				  				  
+			</fileset>
+		</copy>		
+		<delete verbose="true">
+			<fileset basedir="${prod.dir}">
+				<include name="resources/app/build/**" />
+				<include name="resources/app/deploy_script/**" />
+				<include name="resources/app/doc/**" />
+				<include name="resources/app/app/index.html" />
+			</fileset>
+		</delete>
+	  <copy todir="${prod.dir}/resources/app/app">
+				<fileset basedir="${script.dir}/prod">
+					<include name="**\*"/>
+				</fileset>
+		</copy>
+		
+	</target>
+	
+</project>

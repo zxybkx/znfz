@@ -1,0 +1,106 @@
+@import '../../../../utils/utils.less';
+
+.default {
+  position: relative;
+  height: 100%;
+
+  .spin {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 100vh;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    background: rgba(0, 0, 0, .2);
+  }
+
+  :global {
+    .ant-tabs .ant-tabs-nav {
+      color: rgba(0, 0, 0, 0.65) !important;
+      width: 100%;
+    }
+    .ant-card{
+      height: 100%;
+    }
+    .ant-card-body {
+      padding: 0 !important;
+      height: 100%;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+  }
+
+}
+
+.content {
+  .main {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    .aside {
+      width: 200px;
+      flex: 0 0 auto;
+      overflow: auto;
+      .gradient(#fff, #eee);
+      box-shadow: 2px 0 6px rgba(0, 21, 41, .35);
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      transition: width .2s;
+      &.fullScreen {
+        width: 0;
+        display: none;
+      }
+
+      .file{
+        color: #e7e7e7;
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+        transition: background-color .2s;
+        &.active, &:hover{
+          color: #0e69ff;
+          background: #eeeeee;
+        }
+
+      }
+    }
+
+    .main {
+      flex: 1 1 auto;
+      display: flex;
+      .left {
+        flex: 0 0 50%;
+        background: #444;
+        position: relative;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        .trigger {
+          z-index: 20;
+          position: absolute;
+          right: 5px;
+          top: 0;
+        }
+      }
+      .right {
+        flex: 1 1 auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+        transition: all .5s;
+        &.right1 {
+          padding: 5px 10px;
+          background: #fff;
+        }
+        &.right2 {
+          background: #444;
+        }
+        &.hidden {
+          display: none;
+        }
+      }
+    }
+  }
+}
+

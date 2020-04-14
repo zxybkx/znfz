@@ -1,0 +1,57 @@
+.default {
+  padding: 0 10px 10px;
+
+  .spin {
+    position: absolute;
+    width: 100%;
+    height: ~'calc(100vh - 70px)';
+    line-height: ~'calc(100vh - 70px)';
+    right: 0;
+    top: 67px;
+    z-index: 999;
+    background: rgba(0, 0, 0, .2);
+  }
+
+  .title {
+    padding: 5px 20px;
+    color: #fff;
+    background: #444;
+    border-bottom: 1px solid #444;
+  }
+
+  .operation{
+    text-align: right;
+  }
+
+  .list {
+    padding: 8px;
+    background: #efefef;
+    width: 100%;
+    &.over {
+      background: lightblue;
+    }
+
+    & .item {
+      user-select: none;
+      margin: 0 0 8px 0;
+      background: white;
+      border: 1px solid transparent;
+      position: relative;
+      .loading{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+      }
+      &.dragging {
+        background: rgba(56, 77, 155, .4);
+      }
+      &:hover{
+        border: 1px solid #1890ff;
+      }
+    }
+  }
+}

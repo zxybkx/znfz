@@ -1,0 +1,36 @@
+
+@background-color: #eee;
+
+@primary-color: #ccc;
+
+.DataViewTable {
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+  //background: @background-color;
+  tr {
+    th, td {
+      padding: 5px 10px;
+      border: 1px solid @primary-color;
+    }
+    td {
+      width: 35%;
+      word-break: break-all;
+      word-wrap: break-word;
+      text-overflow:ellipsis;
+      overflow:hidden;
+    }
+    th {
+      width: 15%;
+      background: @background-color;
+      //background: rgba(255, 255, 255, .1);
+    }
+    td.operation {
+      text-align: right;
+      button {
+        margin-left: 5px;
+      }
+    }
+  }
+}

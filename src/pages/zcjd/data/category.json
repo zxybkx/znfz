@@ -1,0 +1,139 @@
+{
+  "main": [
+    {
+      "id": 1,
+      "categoryName": "程序",
+      "total" : 0,
+      "children": [{
+        "id": 10,
+        "pid" : 1,
+        "categoryName": "全部",
+        "total" : 0
+      },
+        {
+          "id": 11,
+          "pid" : 1,
+          "categoryName": "辩护与代理",
+          "total" : 0
+        },
+        {
+          "id": 12,
+          "pid" : 1,
+          "categoryName": "强制措施",
+          "total" : 0
+        },
+        {
+          "id": 13,
+          "pid" : 1,
+          "categoryName": "受案立案",
+          "total" : 0
+        },
+        {
+          "id": 14,
+          "pid" : 1,
+          "categoryName": "搜查",
+          "total" : 0
+        },
+        {
+          "id": 15,
+          "pid" : 1,
+          "categoryName": "侦查",
+          "total" : 0
+        }]
+    },
+    {
+      "id": 2,
+      "categoryName": "证据",
+      "total" : 0,
+      "children": [{
+        "id": 20,
+        "pid" : 2,
+        "categoryName": "全部",
+        "total" : 0
+      },
+        {
+          "id": 21,
+          "pid" : 2,
+          "categoryName": "物证",
+          "total" : 0
+        },
+        {
+          "id": 22,
+          "pid" : 2,
+          "categoryName": "书证",
+          "total" : 0
+        },
+        {
+          "id": 23,
+          "pid" : 2,
+          "categoryName": "证人证言",
+          "total" : 0
+        },
+        {
+          "id": 24,
+          "pid" : 2,
+          "categoryName": "被害人陈述",
+          "total" : 0
+        },
+        {
+          "id": 25,
+          "pid" : 2,
+          "categoryName": "犯罪嫌疑人供述和辩解",
+          "total" : 0
+        },
+        {
+          "id": 26,
+          "pid" : 2,
+          "categoryName": "鉴定意见",
+          "total" : 0
+        },
+        {
+          "id": 27,
+          "pid" : 2,
+          "categoryName": "勘验、检查、辨认、侦查实验等笔录",
+          "total" : 0
+        },
+        {
+          "id": 28,
+          "pid" : 2,
+          "categoryName": "视听资料、电子数据",
+          "total" : 0
+        }]
+    },
+    {
+      "id": 3,
+      "categoryName": "事实",
+      "total" : 0,
+      "children": [{
+        "id": 30,
+        "pid" : 3,
+        "categoryName": "全部",
+        "total" : 0
+      },
+        {
+          "id": 31,
+          "pid" : 3,
+          "categoryName": "主体事实",
+          "total" : 0
+        },
+        {
+          "id": 32,
+          "pid" : 3,
+          "categoryName": "客观行为",
+          "total" : 0
+        },
+        {
+          "id": 33,
+          "pid" : 3,
+          "categoryName": "量刑情节",
+          "total" : 0
+        },
+        {
+          "id": 41,
+          "pid" : 4,
+          "categoryName": "待定",
+          "total" : 0
+        }]
+    }
+  ]
+}

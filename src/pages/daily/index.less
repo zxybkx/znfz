@@ -1,0 +1,84 @@
+.default {
+  position: relative;
+  display: flex;
+
+  .fullScreen {
+    z-index: 200;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: ~'calc(100vh - 20px)';
+    width: ~'calc(100vw - 20px)';
+    margin: 10px;
+  }
+
+  .menu {
+    background: #fff;
+    width: 320px;
+    overflow: auto;
+    height: ~'calc(100vh - 120px)';
+
+    :global {
+      .ant-select-selection{
+        color: #7a7a7a;
+      }
+
+      input, button, select, optgroup, textarea{
+        color: #7a7a7a;
+      }
+    }
+  }
+
+  .p {
+    font-weight: 600;
+    margin: 10px 0 10px 10px;
+    font-size: 16px;
+  }
+
+  .ysay {
+    margin: 10px 0 10px 10px;
+    width: 90%
+  }
+
+
+  .monthPicker {
+    margin: 0 10px;
+    width: 90%;
+  }
+
+  :global {
+    .ant-card-body {
+      height: ~'calc(100vh - 120px)'
+    }
+  }
+}
+
+.content {
+  //margin: -24px -16px 0 -16px;
+  width: 100%;
+
+  .list {
+    .title {
+      background: rgba(255, 255, 255, .1);
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+}
+
+.mask {
+  display: none;
+
+  &.fullScreen {
+    display: block;
+    z-index: 199;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background: rgba(0, 0, 0, .85);
+  }
+}

@@ -1,0 +1,60 @@
+.default {
+  position: absolute;
+  bottom: 0;
+  right: 26px;
+
+  & :global {
+    .ant-btn {
+      border: none;
+    }
+
+    .ant-dropdown {
+      color: #444 !important;
+    }
+  }
+}
+
+.menu {
+  padding: 5px 0;
+  display: flex;
+  flex-wrap: nowrap;
+
+  .item {
+    padding: 5px 6px;
+    transition: background .5s;
+    text-align: center;
+    cursor: pointer;
+
+    div {
+      clear: both;
+      width: 110px;
+      display: flex;
+      align-items: center;
+      //font-size: 16px;
+      font-family: Microsoft YaHei;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 1);
+      justify-content: center;
+      height: 30px;
+      background: rgb(16, 72, 128);
+      //border: 1px solid rgba(99, 139, 255, 1);
+      box-shadow: 0px 1px 10px 0px rgba(39, 67, 119, 0.21);
+      border-radius: 4px;
+
+      i {
+        //font-size: 20px;
+        font-weight: 600;
+        color: #fff;
+        margin-right: 5px;
+      }
+    }
+
+    &:hover {
+      div {
+        i {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

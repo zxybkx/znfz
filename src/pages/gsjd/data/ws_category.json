@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "涉及文件",
+    "children": []
+  },
+  {
+    "id": 2,
+    "name": "所有文件",
+    "children": [
+      {
+        "id": 21,
+        "name": "诉讼程序文书",
+        "children": []
+      },
+      {
+        "id": 22,
+        "name": "物证",
+        "children": []
+      },
+      {
+        "id": 23,
+        "name": "书证",
+        "children": []
+      },
+      {
+        "id": 24,
+        "name": "证人证言、被害人陈述",
+        "children": []
+      },
+      {
+        "id": 25,
+        "name": "犯罪嫌疑人供述和辩解",
+        "children": []
+      },
+      {
+        "id": 26,
+        "name": "鉴定意见",
+        "children": []
+      },
+      {
+        "id": 27,
+        "name": "勘验、检查、辨认、侦查实验等笔录",
+        "children": []
+      },
+      {
+        "id": 28,
+        "name": "视听资料、电子数据",
+        "children": []
+      },
+      {
+        "id": 29,
+        "name": "其他",
+        "children": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,65 @@
+{
+  "name": "ZNFZApp",
+  "author": "saieye",
+  "version": "1.9.0",
+  "description": "浙江省检察机关刑事办案智能辅助系统",
+  "main": "main.js",
+  "build": {
+    "productName": "ZNFZApp",
+    "appId": "com.saieye.znfz",
+    "electronVersion": "4.1.4",
+    "copyright": "北京赛迪时代",
+    "asar": false,
+    "directories": {
+      "output": "dist"
+    },
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "http://192.168.0.242/data/download/upgrade/znfz"
+      }
+    ],
+    "win": {
+      "icon": "../src/assets/app/desktop.ico",
+      "requestedExecutionLevel": "highestAvailable",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "ia32"
+          ]
+        }
+      ]
+    },
+    "afterPack": "AfterPackHook.js",
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "../src/assets/app/logo.ico",
+      "uninstallerIcon": "../src/assets/app/uninstall.ico",
+      "installerHeaderIcon": "../src/assets/app/logo.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "浙江省检察机关刑事办案智能辅助系统",
+      "include": "../build/znfz.nsi"
+    }
+  },
+  "scripts": {
+    "build": "electron-builder -w"
+  },
+  "dependencies": {
+    "archiver": "^3.0.0",
+    "bluebird": "^3.5.2",
+    "electron-updater": "^4.0.6",
+    "mkdirp": "^0.5.1",
+    "qs": "^6.5.2",
+    "stream-to-blob": "^1.0.1",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "child_process": "^1.0.2",
+    "electron": "^4.1.4",
+    "electron-builder": "^20.39.0"
+  }
+}

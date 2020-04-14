@@ -1,0 +1,143 @@
+.genrale{
+   display: none !important;
+}
+.default {
+  &:hover {
+    .title {
+      background: #444;
+    }
+  }
+  .title {
+    background-color: #7a7a7a;
+    color: #fff;
+    padding: 5px 0 5px 10px;
+    display: flex;
+
+    .left {
+      flex: 1 1 auto;
+    }
+    .right {
+      flex: 0 0 auto;
+
+      .delete {
+        font-weight: bold;
+        padding: 0 10px;
+        margin: 0;
+        color: #f7f7f7;
+        font-size: 16px;
+        &:hover {
+          color: #ff3459;
+        }
+      }
+    }
+  }
+
+  .content {
+    border-bottom: 1px solid #eeeeee;
+    padding: 5px 10px;
+
+    .main {
+      .part {
+        // display: flex;
+        .left {
+          width: 59px;
+          font-weight: bold;
+          flex: 0 0 auto;
+          text-align: center;
+          padding-top: 15px;
+          color: rgba(0, 0, 0, 0.65);
+        }
+
+        .right {
+          flex: 1 1 auto;
+          //width: 200px;
+
+          .item {
+            width: 100%;
+            margin: 5px 0;
+
+            :global {
+              .ant-select-selection--multiple > ul > li, .ant-select-selection--multiple .ant-select-selection__rendered > ul > li {
+                width: 200px;
+              }
+            }
+          }
+
+          :global {
+            .ant-input {
+              border: 1px solid gray;
+              color: black;
+            }
+            .ant-select .ant-select-selection {
+              color: black;
+              border: 1px solid gray;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .bottom {
+      margin-top: 15px;
+      .save {
+        float: right;
+      }
+    }
+  }
+
+  .add {
+    padding: 0;
+    float: right;
+  }
+
+}
+
+.tooltip {
+  padding: 5px 10px;
+
+  p {
+    margin: 2px 0;
+    span:first-child {
+      color: #0096ff;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+}
+
+.drawer {
+
+  .spin {
+    position: absolute;
+    width: 100%;
+    height: ~'calc(100vh - 70px)';
+    line-height: ~'calc(100vh - 70px)';
+    right: 0;
+    top: 67px;
+    z-index: 999;
+    background: rgba(0, 0, 0, .2);
+  }
+
+  .clear {
+    text-align: right;
+    padding-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .item {
+    border: solid 1px grey;
+    margin-bottom: 30px;
+    padding: 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+
+    .btn {
+      float: right;
+      margin-right: 20px;
+    }
+  }
+
+}

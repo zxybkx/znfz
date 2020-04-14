@@ -1,0 +1,37 @@
+.default {
+  position: relative;
+
+  .header {
+    z-index: 2;
+    position: fixed;
+    top: 7px;
+    right: 26px;
+
+    .user {
+      font-size: 14px;
+      height: 14px;
+      line-height: 14px;
+      font-family: 'microsoft yahei';
+      color: #FFFFFF;
+    }
+
+    .action {
+      cursor: pointer;
+      padding: 0 5px;
+      display: inline-block;
+      transition: all .3s;
+      height: 100%;
+
+      >i {
+        font-size: 16px;
+        color: #FFFFFF;
+      }
+
+      &:hover,
+      &:global(.ant-popover-open) {
+        background: rgba(0, 0, 0, .1);
+      }
+    }
+  }
+
+}

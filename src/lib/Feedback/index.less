@@ -1,0 +1,54 @@
+.Feedback{
+  z-index: 100;
+  position:fixed;
+  top: 1rem;
+  right: 4rem;
+
+  & .Faces{
+    padding: 1rem 2rem;
+    position: fixed;
+    left: 5rem;
+    bottom: 5rem;
+    background: #f7f7f7;
+    border: 1px solid #eee;
+    box-shadow: 2px 2px 1px #eee;
+    margin-bottom: 1rem;
+
+    & p {
+      margin-bottom: 1rem;
+    }
+    & button{
+      margin-right: 5px;
+    }
+  }
+
+  & ul {
+
+    & li {
+      display: block;
+      padding: 0;
+      border-radius: 5%;
+      cursor: pointer;
+      -webkit-transition: all .5s;
+      -moz-transition: all .5s;
+      transition: all .5s;
+
+      &:hover{
+      }
+
+      & a {
+        padding:0.5rem 1rem;
+        display: block;
+        color: #fff;
+        & .Icon {
+          color: #fff;
+          font-size: 1rem;
+        }
+
+        &:hover {
+
+        }
+      }
+    }
+  }
+}

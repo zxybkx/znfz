@@ -1,0 +1,70 @@
+@import '~antd/lib/style/themes/default.less';
+@ease-in-out-circ: cubic-bezier(0.78, 0.14, 0.15, 0.86);
+
+.ant-layout-sider {
+  background: red !important;
+}
+
+.logo {
+  height: 64px;
+  position: relative;
+  line-height: 64px;
+  transition: all 0.3s;
+  overflow: hidden;
+  text-align: center;
+  -webkit-box-reflect: below -15px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.45, transparent), to(rgba(255, 255, 255, 0.25)));
+
+  img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 54px;
+  }
+
+  h1 {
+    color: @normal-color;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    margin: 0 0 0 12px;
+    font-family: 'Myriad Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+  }
+}
+
+.sider {
+  min-height: 100vh;
+  box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+  //background: rgb(28, 62, 160);
+  position: relative;
+  z-index: 10;
+
+  &.ligth {
+    background-color: @normal-color;
+
+    .logo {
+      background: @normal-color;
+
+      h1 {
+        color: #002140;
+      }
+    }
+  }
+
+}
+
+.icon {
+  width: 14px;
+  margin-right: 10px;
+}
+
+:global {
+  .drawer .drawer-content {
+    background: #001529;
+  }
+  .ant-menu-dark.ant-menu-inline .ant-menu-item, .ant-menu-dark.ant-menu-inline .ant-menu-submenu-title{
+    height: 58px;
+    line-height: 58px;
+    font-size: 16px;
+    font: 16px/61px 400 'MicrosoftYaHei';
+  }
+}

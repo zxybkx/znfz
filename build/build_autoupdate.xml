@@ -1,0 +1,128 @@
+<?xml version="1.0" ?>
+<project name="ZNFZProject" default="build" basedir=".">
+  <!--define property -->
+  <property name="debug" value="false" />
+
+  <property name="app.dir" value="../app" />
+
+  <property name="dev.dir" value="./deploy/dev" />
+  <property name="prod.dir" value="./deploy/prod" />
+
+  <property name="complie.dir" value="../app/dist" />
+
+  <property name="script.dir" value="../deploy_script" />
+
+  <!--main target -->
+  <target name="build" description="Build all targets.">
+
+    <!--01 clean-->
+    <call target="clean" />
+
+    <!--02 dev_js-->
+    <call target="dev_js" />
+
+    <!--03 prod_js-->
+    <call target="prod_js" />
+
+
+  </target>
+
+  <!--01 clean-->
+  <target name="clean">
+    <echo message="clean" />
+    <delete verbose="true">
+      <fileset basedir="${dev.dir}">
+        <include name="**/*" />
+        <exclude name="readme.md"/>
+      </fileset>
+    </delete>
+
+    <delete verbose="true">
+      <fileset basedir="${prod.dir}">
+        <include name="**/*" />
+        <exclude name="readme.md"/>
+      </fileset>
+    </delete>
+  </target>
+
+  <!--02 dev_js -->
+  <target name="dev_js">
+    <echo message= "build dev js"/>
+    <!--(a) delete files -->
+
+    <delete verbose="true">
+      <fileset basedir="${complie.dir}">
+        <include name="**/*" />
+      </fileset>
+    </delete>
+
+    <!--(b) copy files-->
+    <echo message="Copying dev_js files" />
+
+    <copy todir="${app.dir}" overwrite="true">
+      <fileset basedir="${script.dir}/dev">
+        <include name="**\*" />
+      </fileset>
+    </copy>
+    <!--(c) build-->
+    <echo message="build dev_js" />
+    <exec program="electron-build.bat"
+          basedir="./"
+    />
+    <!--(d) publish-->
+    <echo message="publish dev_js" />
+
+    <delete verbose="true">
+      <fileset basedir="${dev.dir}">
+        <include name="**/*" />
+      </fileset>
+    </delete>
+
+    <copy todir="${dev.dir}/js" overwrite="true">
+      <fileset basedir="${complie.dir}">
+        <include name="**/*" />
+      </fileset>
+    </copy>
+  </target>
+
+  <!--02 prod_js -->
+  <target name="prod_js">
+    <echo message= "build prod js"/>
+    <!--(a) delete files -->
+
+    <delete verbose="true">
+      <fileset basedir="${complie.dir}">
+        <include name="**/*" />
+      </fileset>
+    </delete>
+
+    <!--(b) copy files-->
+    <echo message="Copying prod_js files" />
+
+    <copy todir="${app.dir}" overwrite="true">
+      <fileset basedir="${script.dir}/prod">
+        <include name="**\*" />
+      </fileset>
+    </copy>
+    <!--(c) build-->
+    <echo message="build prod_js" />
+    <exec program="electron-build.bat"
+          basedir="./"
+    />
+    <!--(d) publish-->
+    <echo message="publis prod_js" />
+
+    <delete verbose="true">
+      <fileset basedir="${prod.dir}">
+        <include name="**/*" />
+      </fileset>
+    </delete>
+
+    <copy todir="${prod.dir}/js" overwrite="true">
+      <fileset basedir="${complie.dir}">
+        <include name="**/*" />
+      </fileset>
+    </copy>
+  </target>
+
+</project>

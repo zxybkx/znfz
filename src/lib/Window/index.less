@@ -1,0 +1,147 @@
+.Window {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 0;
+  top: 50px;
+  left: 150px;
+  width: 800px;
+  height: 600px;
+  background: #eee;
+  border: 1px solid #b0b0b0;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px #111;
+  z-index: 1000;
+
+  & .ResizeTrigger {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 1001;
+    &.top {
+      left: 0;
+      top: 0;
+      height: 5px;
+      cursor: s-resize;
+    }
+
+    &.bottom {
+      left: 0;
+      bottom: 0;
+      height: 5px;
+      cursor: n-resize;
+    }
+
+    &.left {
+      left: 0;
+      top: 0;
+      width: 5px;
+      cursor: e-resize;
+    }
+
+    &.right {
+      right: 0;
+      top: 0;
+      width: 5px;
+      cursor: w-resize;
+    }
+  }
+
+  & .TitleBar {
+    flex: 0 0 auto;
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 0 0 10px;
+    border-bottom: 1px solid #b0b0b0;
+    width: 100%;
+    cursor: move;
+    background: #2098D1;
+
+    & .Title {
+      flex: 1 1 auto;
+      color: #fff;
+      font-size: 1rem;
+
+      & .Icon {
+        font-size: 1rem;
+      }
+
+      & small {
+        font-size: 1rem;
+        color: #333333;
+      }
+    }
+
+    & .Operation {
+      flex: 0 0 40%;
+      color: #f9f9f9;
+      position: relative;
+      & ul {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        height: 20px;
+        line-height: 20px;
+        & li {
+          font-weight: 500;
+          display: inline-block;
+          font-size: 12px;
+          padding: 0 5px;
+          cursor: pointer;
+          border: 1px solid transparent;
+          margin-right: -1px;
+          &:hover {
+            border: 1px solid #d7d7d7;
+          }
+
+          & .Icon{
+            font-weight: bold;
+          }
+          &.close {
+            &:hover {
+              border: 1px solid red;
+              background: red;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & .Container {
+    flex: 1 1 auto;
+    background: #fff;
+    margin-top: 2px;
+    padding: 10px;
+    height: 100%;
+    overflow: auto;
+    position: relative;
+  }
+
+  & .StatusBar {
+    position: relative;
+    flex: 0 0 auto;
+    padding: 5px 10px;
+    width: 100%;
+    border-top: 1px solid #ddd;
+    background: #eee;
+
+    & .ResizeTrigger {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      cursor: nwse-resize;
+      border-bottom: 12px solid #bbb;
+      border-left: 12px solid transparent;
+    }
+  }
+}

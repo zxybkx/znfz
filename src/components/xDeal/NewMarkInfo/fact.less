@@ -1,0 +1,54 @@
+.factTop {
+  display: flex;
+
+  .left {
+    border-top: 1px solid grey;
+    //border-bottom: 1px solid grey;
+    border-left: 1px solid grey;
+    flex: 0 0 60px;
+    text-align: center;
+    background-color: #eee;
+    color: black;
+    padding-top: 45px;
+  }
+
+  .right {
+    flex: 1 1 auto;
+  }
+
+  .leftCon {
+    position: relative;
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+    border-top: 1px solid grey;
+    flex: 0 0 41px;
+    text-align: center;
+    padding-top: 70px;
+    color: black;
+
+    .zl{
+      position: absolute;
+      left: 5px;
+      top: 45px;
+    }
+  }
+
+  .rightCon {
+    flex: 1 1 auto;
+    padding: 10px;
+    border-right: 1px solid grey;
+    border-top: 1px solid grey;
+
+    .item {
+      width: 100%;
+      margin: 0;
+      padding-right: 10px;
+
+      :global {
+        .ant-select-selection--multiple > ul > li, .ant-select-selection--multiple .ant-select-selection__rendered > ul > li {
+          width: 200px;
+        }
+      }
+    }
+  }
+}

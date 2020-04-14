@@ -1,0 +1,152 @@
+@background-color-light: #fff;
+@primary-color-light: #b0b0b0;
+@active-color-light: #40a9ff;
+@text-color-light: #111;
+@text-color-light-secondary: #444;
+
+.light-theme {
+
+  :global{
+    .ant-steps {
+      transform: scale(0.9);
+      .ant-steps-item {
+        &.ant-steps-item-finish {
+          .ant-steps-item-icon {
+            .ant-steps-icon {
+              color: @active-color-light;
+            }
+          }
+          .ant-steps-item-content {
+            .ant-steps-item-title {
+              a {
+                color: @active-color-light;
+              }
+            }
+          }
+        }
+        .ant-steps-item-icon {
+          .ant-steps-icon {
+            color: @text-color-light-secondary;
+          }
+        }
+        .ant-steps-item-content {
+          .ant-steps-item-title {
+            a {
+              color: @text-color-light-secondary;
+            }
+          }
+        }
+      }
+    }
+    .ant-collapse {
+      background: #fff;
+    }
+  }
+
+  .cm-categories{
+    :global{
+      .ant-btn{
+        border-radius: 0;
+        background: @background-color-light;
+        color: #444;
+      }
+    }
+    .active{
+      :global{
+        .ant-btn{
+          background: rgb(0, 60, 186);
+          color:#fff;
+        }
+      }
+    }
+  }
+
+  .cm-status {
+    a {
+      color: #444;
+      padding: 5px;
+      &.active {
+        color: @active-color-light;
+      }
+    }
+
+  }
+
+  .cm-office {
+    .loader{
+      background: #000;
+    }
+    .header {
+      a {
+        color: #d7d7d7;
+        &:hover {
+          color: #40a9ff;;
+        }
+      }
+
+      :global {
+        .ant-btn {
+          border-radius: 0;
+          border: 1px solid rgb(0, 60, 186);
+          background: rgb(0, 60, 186);
+          color: #fff;
+        }
+      }
+      .active {
+        :global {
+          .ant-btn {
+            background: rgb(0, 60, 186);
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .cm-workspace{
+    .left-top{
+      .change-button{
+      }
+      .top-card{
+      }
+    }
+
+    .left-main{
+      .body{
+        .title{
+        }
+        .table{
+          :global {
+            .ant-table-small .ant-table-thead th{
+            }
+            .ant-table-tbody > tr{
+              & td{
+              }
+              &:hover td{
+              }
+            }
+            .ant-table-placeholder {
+            }
+          }
+        }
+      }
+    }
+
+    .right-top{
+    }
+
+    .right-bottom{
+    }
+
+  }
+
+  .cm-user-layout{
+    .title{
+      color: #1a1a1a;
+    }
+    .desc{
+      color: #444;
+    }
+  }
+}
+

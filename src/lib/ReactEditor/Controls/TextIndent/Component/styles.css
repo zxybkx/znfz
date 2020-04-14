@@ -1,0 +1,24 @@
+.rdw-text-indent-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.rdw-text-indent-dropdown {
+  width: 50px;
+  z-index: 90;
+}
+
+.rdw-text-indent-dropdownOption {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.rdw-indent-block {
+  text-indent: 2rem;
+}
+
+.rdw-none-indent-block {
+  text-indent: 0;
+}

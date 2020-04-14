@@ -1,0 +1,25 @@
+.default{
+  position: relative;
+  .clear{
+    position: absolute;
+    top: 0;
+    right: 20px;
+    border: none;
+    z-index: 11;
+    &.hidden{
+      display: none;
+    }
+  }
+  .search{
+
+  }
+  :global {
+    .ant-input {
+      outline: none;
+      background: #fff !important;
+      color: #444!important;
+      z-index: 10;
+      padding-right: 50px!important;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.default {
+  width: 100%;
+  margin: 5px 0;
+  &.dark{
+    .item {
+      color: #d7d7d7;
+    }
+  }
+
+  &.light{
+    .item {
+      color: #444444;
+    }
+  }
+
+  .item {
+    display: inline-block;
+    text-align: center;
+    transition: all .5s;
+    user-select: none;
+    &:hover {
+      color: #1890ff;
+    }
+
+    &.active {
+      color: #1890ff;
+    }
+  }
+}

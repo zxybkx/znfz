@@ -1,0 +1,83 @@
+.generalEdit{
+  display: none;
+}
+.ungeneralEdit{
+  display: block;
+
+}
+.default{
+  position: relative;
+
+  .item {
+    margin-bottom: 20px;
+  }
+
+  .coll {
+    background-color: #f0f0f0;
+  }
+
+  .sjaj {
+    float: right;
+    margin-right: 30px;
+  }
+
+  .fullScreen{
+    z-index: 200;
+    position: fixed;
+    top:0;
+    left:0;
+    height: ~'calc(100vh - 20px)';
+    width: ~'calc(100vw - 20px)';
+    margin: 10px;
+  }
+
+  :global{
+    .ant-card-body{
+      padding: 0!important;
+      height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+  }
+
+}
+
+.content{
+  margin: -40px -24px 0px -24px;
+}
+
+.mask{
+  display: none;
+
+  &.fullScreen{
+    display: block;
+    z-index: 199;
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background: rgba(0,0,0,.85);
+  }
+}
+
+.input {
+  :global {
+    .ant-input {
+      border: 1px solid rgba(0, 0, 0, .2) !important;
+    }
+  }
+}
+
+.text {
+  float: left;
+  width: 240px;
+}
+
+.jlInput {
+  float: left;
+  width: 200px;
+  margin-left: 310px;
+}

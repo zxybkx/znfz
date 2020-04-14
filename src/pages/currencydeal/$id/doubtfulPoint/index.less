@@ -1,0 +1,219 @@
+.colo{
+  background: #F2F2F2;
+}
+:global{
+  .ant-tabs-nav .ant-tabs-tab{
+    padding: 0 !important;
+  }
+}
+.default {
+  position: relative;
+  background: #001529;
+  .spin {
+    position: absolute;
+    width: ~'calc(100vw)';
+    height: ~'calc(100vh - 70px)';
+    line-height: ~'calc(100vh - 70px)';
+    right: 0;
+    top: 67px;
+    z-index: 999;
+    background: rgba(0, 0, 0, .2);
+  }
+
+  .flow {
+    display: flex;
+    .steps {
+      flex: 1 1 auto;
+      :global{
+        .ant-steps-item-finish{
+          .ant-steps-item-title a{
+            color: #fff !important;
+          }
+        }
+      }
+      :global{
+        .ant-steps-item-title a{
+          color: #fff !important;
+        }
+      }
+      :global {
+        .ant-steps-item-finish {
+          .ant-steps-icon {
+            color: #40a9ff !important;
+            display: block;
+            padding: 3px;
+          }
+        }
+      }
+      :global {
+        .ant-steps-icon {
+          color: #d7d7d7 !important;
+          display: block;
+          padding: 3px;
+        }
+      }
+    }
+    .tools {
+      position: relative;
+      flex: 0 0 200px;
+    }
+  }
+
+  :global {
+    .ant-card-body {
+      padding: 0 !important;
+      height: ~'calc(100vh - 70px)';
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+  }
+}
+
+.content {
+  margin: -24px -16px 0 -16px;
+  .main {
+    height: 100%;
+    padding: 10px;
+    //align-items: stretch;
+    //background: #001529;
+    background-color: white;
+    //box-shadow: 2px 0 6px rgba(0, 21, 41, .35);
+    //flex-direction: column;
+    //transition: width .2s;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    align-items: stretch;
+
+    :global {
+      .ant-tabs-ink-bar{
+        top: 0;
+        height: 3px;
+        background:rgba(73,118,247,1);
+      }
+      .ant-collapse {
+        margin-bottom: 12px;
+        .ant-collapse-item {
+          .ant-collapse-header {
+            font-size: 15px;
+            line-height: 2;
+            background: #fff;
+            //padding: 5px 0 5px 30px !important;
+            color: #24429A !important;
+            border-bottom: 1px solid #dddddd;
+
+            //border-bottom: 1px solid transparent !important;
+            .arrow {
+              left: 10px !important;
+              color: #444 !important;
+            }
+          }
+          .ant-collapse-content {
+            //padding: 20px !important;
+            background: #fff !important;
+            //border-top: 1px solid #d9d9d9 !important;
+            color: #444 !important;
+          }
+        }
+      }
+      .ant-tabs-tabpane {
+        display: flex;
+        align-items: stretch;
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: ~'calc(100vh - 180px)';
+      }
+    }
+
+    .left {
+      flex: 0 0 20%;
+      overflow-y: auto;
+      overflow-x: hidden;
+      margin-right: 10px;
+      border-right: 1px solid #EEEEEE;
+
+      .sssc {
+        padding: 10px;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: #ECEFF8;
+        &:hover {
+          color: #0f87dd;
+        }
+      }
+
+      .ssscSelected {
+        color: #0f87dd;
+      }
+
+    }
+    .middle {
+      flex: 0 0 20%;
+      z-index: 2;
+      overflow-y: auto;
+      border-right: 1px solid #EEEEEE;
+      padding-right: 5px;
+    }
+    .factMiddle {
+      flex: 0 0 40%;
+      z-index: 2;
+      overflow-y: auto;
+      border-right: 1px solid #EEEEEE;
+      padding-right: 5px;
+    }
+    .right {
+      flex: 1 1 auto;
+      z-index: 2;
+      margin-left: 10px;
+      padding-right: 10px;
+      overflow-y: auto;
+      position: relative;
+
+      .isSimple {
+        //position: absolute;
+        //right: 20px;
+        //top: 0;
+        float: left;
+        position: absolute;
+        left: 84px;
+        z-index: 20;
+        margin-top: 8px;
+        margin-right: 20px;
+      }
+
+    }
+
+    .fact {
+      flex: 1 1 auto;
+      z-index: 2;
+      border-left: 1px solid #ccc;
+      margin-left: 10px;
+      overflow-y: auto;
+
+      .bottomContent {
+        background-color: white;
+        padding: 5px 10px;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+      }
+
+    }
+
+    .showall {
+      position: absolute;
+      right: 150px;
+      top: 30px;
+    }
+    .showRight {
+      position: absolute;
+      right: 20px;
+      top: 30px;
+    }
+
+  }
+}
+

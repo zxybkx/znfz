@@ -1,0 +1,156 @@
+@import "~antd/lib/style/themes/default.less";
+
+.main {
+  width: 368px;
+  margin: 0 auto;
+
+  .tabs {
+    padding: 0 2px;
+    margin: 0 -2px;
+    :global {
+      .ant-tabs-tab {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      .ant-input-affix-wrapper .ant-input:not(:first-child) {
+        padding-left: 34px;
+      }
+    }
+  }
+
+  .autoLogin{
+    display: none;
+  }
+
+  :global {
+    .ant-tabs .ant-tabs-bar {
+      border-bottom: 0;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .ant-form-item {
+      margin-bottom: 24px;
+    }
+
+    .ant-select-selection--single{
+      height: 40px;
+    }
+    .ant-select-selection__placeholder{
+      top: 60%;
+      font-size: 16px;
+    }
+    .ant-select-selection-selected-value{
+      font-size: 16px;
+      margin: 4px 0 0 4px;
+    }
+  }
+
+  .prefixIcon {
+    font-size: @font-size-base;
+  }
+
+  .getCaptcha {
+    display: block;
+    width: 100%;
+  }
+
+  .additional {
+    text-align: left;
+
+    .forgot {
+      float: right;
+    }
+
+    .submit {
+      width: 100%;
+      margin-top: 24px;
+    }
+
+    :global {
+      .ant-form-item-control {
+        line-height: 22px;
+      }
+    }
+  }
+
+  .iconAlipay, .iconTaobao, .iconWeibo {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url('https://gw.alipayobjects.com/zos/rmsportal/itDzjUnkelhQNsycranf.svg');
+    margin-left: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+
+  .iconAlipay {
+    background-position: -24px 0;
+
+    &:hover {
+      background-position: 0 0;
+    }
+  }
+
+  .iconTaobao {
+    background-position: -24px -24px;
+
+    &:hover {
+      background-position: 0 -24px;
+    }
+  }
+
+  .iconWeibo {
+    background-position: -24px -48px;
+
+    &:hover {
+      background-position: 0 -48px;
+    }
+  }
+
+  .other {
+    text-align: left;
+    margin-top: 24px;
+    line-height: 22px;
+
+    .register {
+      float: right;
+    }
+  }
+}
+
+.tree{
+  position: fixed;
+  z-index: 999;
+
+  :global{
+    .ant-select-search__field{
+      color: #1a1a1a;
+    }
+    .ant-select-tree{
+      & li{
+        & span{
+          &.ant-select-tree-switcher{
+            color: transparent;
+            background: none;
+          }
+          &.ant-select-tree-switcher_open{
+            background: url('../../../public/images/icon/icon_minus.png') 10% 30% no-repeat;
+            background-size: 16px 16px;
+          }
+          &.ant-select-tree-switcher_close{
+            background: url('../../../public/images/icon/icon_plus.png') 10% 30% no-repeat;
+            background-size: 16px 16px;
+          }
+          &.ant-select-tree-switcher-noop{
+            background: url('../../../public/images/icon/buildings.png') 10% 30% no-repeat;
+            background-size: 16px 16px;
+          }
+          &.ant-select-tree-title{
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

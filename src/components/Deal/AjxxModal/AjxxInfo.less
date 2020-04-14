@@ -1,0 +1,46 @@
+@background-color: #ffffff;
+@primary-color: #ddd;
+
+.default {
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+  background: @background-color;
+
+  tr {
+
+    th,
+    td {
+      padding: 5px 10px;
+      border: 1px solid @primary-color;
+    }
+
+    td {
+      width: 35%;
+      word-break: break-all;
+      color: #333;
+      word-wrap: break-word;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    th {
+      width: 15%;
+      font-size: 16px;
+      font-family: Microsoft YaHei;
+      font-weight: 400;
+      color: rgba(136, 136, 136, 1);
+      text-align: right;
+      background: rgba(246, 247, 251, 1);
+    }
+
+    td.operation {
+      text-align: right;
+
+      button {
+        margin-left: 5px;
+      }
+    }
+  }
+}

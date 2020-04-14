@@ -1,0 +1,24 @@
+.table{
+  :global {
+    .ant-table-small > .ant-table-content > .ant-table-body > table > .ant-table-thead th{
+      background-color: #eff3f6;
+      border:0;
+      text-align: center;
+    }
+    .ant-table-tbody > tr{
+      color:black;
+      & td{
+        //border:0;
+        border-bottom: 1px solid rgb(232,232,232);
+        text-align: center;
+      }
+      &:hover td{
+        //background-color: #3586d1;
+        background-color: rgba(128, 128, 128, 0.3);
+      }
+    }
+    .ant-table-small{
+      border:0;
+    }
+  }
+}
